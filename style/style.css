@@ -231,6 +231,16 @@ button:focus {
     outline-offset: 2px;
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    transform: none;
+    background-color: var(--color-primary);
+}
+
 /**
  * Score
  */
@@ -349,6 +359,39 @@ footer {
     background: #FBE9E7;
 
     border-radius: 12px;
+}
+
+/**
+ * Note sur l'origine des mots
+ */
+
+.noteSource {
+    margin: 12px 0;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--color-secondary);
+}
+
+.noteSource.ok {
+    color: #2E7D32;
+}
+
+.noteSource.secours {
+    color: #B26A00;
+}
+
+/**
+ * Enregistrement du score
+ */
+
+.zoneEnregistrement {
+    margin: 15px 0;
+}
+
+.zoneEnregistrement input[type='text'] {
+    margin-bottom: 10px;
 }
 
 /**

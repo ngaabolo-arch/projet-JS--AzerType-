@@ -4,4 +4,11 @@ const zoneProposition = document.querySelector(".zoneProposition");
 const zoneScore = document.querySelector(".zoneScore span");
 const optionSource = document.querySelectorAll(".optionSource");
 
-lancerJeu();
+async function demarrer() {
+    const source = await chargerPropositions();
+    afficherNoteSource(source);
+    lancerJeu();
+    document.getElementById("btnStart").disabled = false;
+}
+
+demarrer();

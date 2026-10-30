@@ -1,3 +1,10 @@
+// Adresse de l'API PHP (relative : fonctionne sur WAMP).
+// Quand l'API sera sur un hébergeur en ligne, on mettra son adresse complète ici.
+const URL_API = "api/mots.php";
+
+const URL_ENREGISTRER = "api/enregistrer_score.php";
+const URL_CLASSEMENT = "api/classement.php";
+
 let listeMot = [
     "Cachalot", "petunia", "Serviette", "clavier", "ordinateur",
     "projet", "variable", "fonction", "boucle", "tableau",

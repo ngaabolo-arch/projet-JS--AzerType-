@@ -51,6 +51,8 @@
             Votre score : <span>0</span>
         </div>
 
+        <p class="noteSource">Chargement des mots…</p>
+
     </main>
 
     <!-- FOOTER -->
@@ -58,12 +60,24 @@
 
     </footer>
 
-    <!-- FENÊTRE DE FIN DE PARTIE -->
+        <!-- FENÊTRE DE FIN DE PARTIE -->
     <div id="popupFin" class="popup cache">
         <div class="popupContenu">
             <h2>Fin de la partie</h2>
             <p>Score total : <span id="finScore"></span></p>
             <p id="messageFin" class="messageFin"></p>
+
+            <div id="zoneEnregistrement" class="zoneEnregistrement">
+                <input type="text" id="inputPseudo" maxlength="20" placeholder="Ton pseudo">
+                <button id="btnEnregistrer">Enregistrer mon score</button>
+                <p id="messageEnregistrement" class="noteSource"></p>
+            </div>
+
+            <div id="zoneClassement" class="zoneClassement">
+                <h3>Classement (Top 10)</h3>
+                <ul id="listeClassement"></ul>
+            </div>
+
             <h3>Mots trouvés</h3>
             <ul id="listeTrouves"></ul>
             <h3>Mots ratés (avec correction)</h3>
@@ -82,7 +96,8 @@
                 Tu as 3 secondes par mot et 5 secondes par phrase. Quand le temps est écoulé,
                 ta réponse est validée automatiquement.
             </p>
-            <button id="btnStart">YES, start</button>
+            <p class="noteSource">Chargement des mots…</p>
+            <button id="btnStart" disabled>YES, start</button>
             <button id="btnPartir">GET LOST</button>
         </div>
     </div>
