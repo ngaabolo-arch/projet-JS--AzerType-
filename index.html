@@ -1,9 +1,9 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AzerType - Apprends à taper plus vite</title>
     <!-- Inclusion du fichier css pour le style du jeu -->
     <link rel="stylesheet" href="style/style.css">
 
@@ -14,7 +14,7 @@
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
-    
+
     <!-- HEADER -->
     <header>
         <h1>AzerType</h1>
@@ -38,6 +38,10 @@
             Azerty
         </div>
 
+        <div class="zoneChrono">
+            Temps restant : <span id="tempsRestant">3</span> s
+        </div>
+
         <div class="zoneSaisie">
             <input type="text" id="inputEcriture" name="inputEcriture">
             <button id="btnValiderMot">Valider</button>
@@ -46,12 +50,41 @@
         <div class="zoneScore">
             Votre score : <span>0</span>
         </div>
-        
+
     </main>
 
     <!-- FOOTER -->
     <footer>
-         
+
     </footer>
+
+    <!-- FENÊTRE DE FIN DE PARTIE -->
+    <div id="popupFin" class="popup cache">
+        <div class="popupContenu">
+            <h2>Fin de la partie</h2>
+            <p>Score total : <span id="finScore"></span></p>
+            <p id="messageFin" class="messageFin"></p>
+            <h3>Mots trouvés</h3>
+            <ul id="listeTrouves"></ul>
+            <h3>Mots ratés (avec correction)</h3>
+            <ul id="listeRates"></ul>
+            <button id="btnRecommencer">Recommencer</button>
+            <button id="btnSortir">Sortir</button>
+        </div>
+    </div>
+
+    <!-- FENÊTRE DE DÉBUT (visible au chargement) -->
+    <div id="popupDebut" class="popup">
+        <div class="popupContenu">
+            <p>Hey you, would you like to play a small game?<br>If not, GET LOST.</p>
+            <p class="avertissement">
+                ⚠️ Attention : un décompte démarre dès que tu cliques sur « YES, start ».
+                Tu as 3 secondes par mot et 5 secondes par phrase. Quand le temps est écoulé,
+                ta réponse est validée automatiquement.
+            </p>
+            <button id="btnStart">YES, start</button>
+            <button id="btnPartir">GET LOST</button>
+        </div>
+    </div>
 </body>
 </html>

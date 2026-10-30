@@ -263,6 +263,95 @@ footer {
 }
 
 /**
+ * Chronomètre
+ */
+
+.zoneChrono {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--color-primary);
+}
+
+.zoneChrono.urgent {
+    color: #B3261E;
+}
+
+/**
+ * Fenêtres de début et de fin
+ */
+
+.cache {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(92, 64, 51, 0.6);
+}
+
+.popup.cache {
+    display: none;
+}
+
+.popupContenu {
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    color: var(--color-primary);
+    background: var(--color-background);
+
+    border-radius: 18px;
+}
+
+.popupContenu h3 {
+    margin: 15px 10px 5px;
+}
+
+.popupContenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popupContenu button {
+    margin: 0.5rem;
+}
+
+.messageFin {
+    margin: 10px 0;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.avertissement {
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 12px;
+
+    font-size: 15px;
+    line-height: 1.5;
+
+    color: #7A1F1A;
+    background: #FBE9E7;
+
+    border-radius: 12px;
+}
+
+/**
  * Responsive
  */
 
